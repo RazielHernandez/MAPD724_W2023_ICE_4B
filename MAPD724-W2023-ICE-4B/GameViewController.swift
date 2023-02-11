@@ -4,6 +4,7 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
+    var currentScene: GKScene?
 
     @IBOutlet weak var LivesLabel: UILabel!
     @IBOutlet weak var ScoreLabel: UILabel!
@@ -11,7 +12,9 @@ class GameViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        if let scene = GKScene(fileNamed: "GameScene")
+        presentStartScene()
+        
+        /*if let scene = GKScene(fileNamed: "GameScene")
         {
             if let sceneNode = scene.rootNode as! GameScene?
             {
@@ -22,10 +25,11 @@ class GameViewController: UIViewController {
                     view.ignoresSiblingOrder = true
                 }
             }
-        }
+        }*/
+        
+        CollisionManager.gameViewController = self
         
         // Initialize the Lives and Score
-        CollisionManager.gameViewController = self
         ScoreManager.Score = 0
         ScoreManager.Lives = 5
         updateLivesLabel()
@@ -49,6 +53,29 @@ class GameViewController: UIViewController {
     func updateScoreLabel()
     {
         ScoreLabel.text = "Score: \(ScoreManager.Score)"
+    }
+    
+    func setScene(sceneName: String) -> Void {
+        currentScene = GKScene(fileNamed: sceneName)
+        if let scene = currentScene!.rootNode as! SKScene?
+        {
+            scene.scaleMode = .aspectFill
+            if let view = self.view as! SKView?
+            {
+                view.presentScene(scene)
+                view.ignoresSiblingOrder = true
+            }
+        }
+    }
+    
+    func presentStartScene(){
+        LivesLabel.isHidden = true
+        ScoreLabel.isHidden = true
+        setScene(sceneName: "StartScene")
+    }
+    
+    func presentEndScene(){
+        
     }
 }
 

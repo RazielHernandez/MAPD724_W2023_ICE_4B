@@ -76,6 +76,8 @@
 		8ECD344A299713CC00276CEC /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD3440299713CB00276CEC /* Layer.swift */; };
 		8ECD344B299713CC00276CEC /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD3442299713CC00276CEC /* ScoreManager.swift */; };
 		8ECD344C299713CC00276CEC /* CollisionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD3443299713CC00276CEC /* CollisionManager.swift */; };
+		8ECD344F2998315E00276CEC /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8ECD344E2998315E00276CEC /* StartScene.sks */; };
+		8ECD3451299831DE00276CEC /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD3450299831DE00276CEC /* StartScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +151,9 @@
 		8ECD3440299713CB00276CEC /* Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
 		8ECD3442299713CC00276CEC /* ScoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
 		8ECD3443299713CC00276CEC /* CollisionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionManager.swift; sourceTree = "<group>"; };
+		8ECD344E2998315E00276CEC /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
+		8ECD3450299831DE00276CEC /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		8ECD34522998523900276CEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,10 +186,10 @@
 		8ECD33B32997135C00276CEC /* MAPD724-W2023-ICE-4B */ = {
 			isa = PBXGroup;
 			children = (
+				8ECD34522998523900276CEC /* Info.plist */,
+				8ECD344D2998307000276CEC /* Scenes */,
 				8ECD33B42997135C00276CEC /* AppDelegate.swift */,
-				8ECD33B62997135C00276CEC /* GameScene.sks */,
 				8ECD33B82997135C00276CEC /* Actions.sks */,
-				8ECD33BA2997135C00276CEC /* GameScene.swift */,
 				8ECD33BC2997135C00276CEC /* GameViewController.swift */,
 				8ECD33BE2997135C00276CEC /* Main.storyboard */,
 				8ECD33C12997135D00276CEC /* Assets.xcassets */,
@@ -318,6 +323,17 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		8ECD344D2998307000276CEC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8ECD33B62997135C00276CEC /* GameScene.sks */,
+				8ECD33BA2997135C00276CEC /* GameScene.swift */,
+				8ECD344E2998315E00276CEC /* StartScene.sks */,
+				8ECD3450299831DE00276CEC /* StartScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -419,6 +435,7 @@
 				8ECD3413299713A400276CEC /* smallexplosion4.png in Resources */,
 				8ECD3405299713A400276CEC /* plane3.png in Resources */,
 				8ECD3411299713A400276CEC /* coin10.png in Resources */,
+				8ECD344F2998315E00276CEC /* StartScene.sks in Resources */,
 				8ECD3410299713A400276CEC /* restartButton.png in Resources */,
 				8ECD3409299713A400276CEC /* plane.png in Resources */,
 				8ECD3430299713A400276CEC /* thunder.mp3 in Resources */,
@@ -451,6 +468,7 @@
 				8ECD33BD2997135C00276CEC /* GameViewController.swift in Sources */,
 				8ECD3444299713CC00276CEC /* Islands.swift in Sources */,
 				8ECD3447299713CC00276CEC /* Player.swift in Sources */,
+				8ECD3451299831DE00276CEC /* StartScene.swift in Sources */,
 				8ECD344A299713CC00276CEC /* Layer.swift in Sources */,
 				8ECD3446299713CC00276CEC /* Ocean.swift in Sources */,
 				8ECD344B299713CC00276CEC /* ScoreManager.swift in Sources */,
@@ -603,12 +621,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V4ZBAPNCNA;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MAPD724-W2023-ICE-4B/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mail Pilot";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.action-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -621,7 +641,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -634,12 +654,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V4ZBAPNCNA;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MAPD724-W2023-ICE-4B/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mail Pilot";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.action-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -652,7 +674,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
