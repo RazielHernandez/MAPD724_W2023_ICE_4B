@@ -36,8 +36,8 @@
                                 <color key="textColor" red="0.96841138599999999" green="0.4847198566" blue="0.24120483030000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXD-jL-KW9">
-                                <rect key="frame" x="20" y="249" width="390" height="242"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXD-jL-KW9">
+                                <rect key="frame" x="21" y="249" width="390" height="242"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="242" id="4Ej-c9-dot"/>
                                 </constraints>
@@ -54,6 +54,9 @@ Mail Pilot</string>
                                     <fontDescription key="titleFontDescription" name="Dock51" family="Dock 51" pointSize="48"/>
                                     <color key="baseForegroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="StartButton_Pressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="zE5-nb-SPb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
@@ -74,6 +77,8 @@ Mail Pilot</string>
                     <connections>
                         <outlet property="LivesLabel" destination="S8O-4M-qTz" id="vt0-o2-0YK"/>
                         <outlet property="ScoreLabel" destination="NSi-4Y-hlF" id="PD0-an-tOd"/>
+                        <outlet property="StartButton" destination="uX1-9W-dPJ" id="sTj-4h-CbT"/>
+                        <outlet property="StartLabel" destination="nXD-jL-KW9" id="1te-kI-za8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>

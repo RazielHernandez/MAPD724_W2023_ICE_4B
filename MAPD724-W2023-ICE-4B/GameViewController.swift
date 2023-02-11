@@ -9,6 +9,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var LivesLabel: UILabel!
     @IBOutlet weak var ScoreLabel: UILabel!
     
+    @IBOutlet weak var StartLabel: UILabel!
+    @IBOutlet weak var StartButton: UIButton!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -29,11 +32,7 @@ class GameViewController: UIViewController {
         
         CollisionManager.gameViewController = self
         
-        // Initialize the Lives and Score
-        ScoreManager.Score = 0
-        ScoreManager.Lives = 5
-        updateLivesLabel()
-        updateScoreLabel()
+        
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask
@@ -71,11 +70,27 @@ class GameViewController: UIViewController {
     func presentStartScene(){
         LivesLabel.isHidden = true
         ScoreLabel.isHidden = true
+        StartLabel.isHidden = false
+        StartButton.isHidden = false
         setScene(sceneName: "StartScene")
     }
     
     func presentEndScene(){
         
+    }
+    
+    
+    @IBAction func StartButton_Pressed(_ sender: UIButton) {
+        LivesLabel.isHidden = false
+        ScoreLabel.isHidden = false
+        StartLabel.isHidden = true
+        StartButton.isHidden = true
+        // Initialize the Lives and Score
+        ScoreManager.Score = 0
+        ScoreManager.Lives = 5
+        updateLivesLabel()
+        updateScoreLabel()
+        setScene(sceneName: "GameScene")
     }
 }
 
