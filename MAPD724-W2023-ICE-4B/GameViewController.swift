@@ -12,23 +12,14 @@ class GameViewController: UIViewController {
     @IBOutlet weak var StartLabel: UILabel!
     @IBOutlet weak var StartButton: UIButton!
     
+    @IBOutlet weak var EndLabel: UILabel!
+    @IBOutlet weak var EndButton: UIButton!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         presentStartScene()
         
-        /*if let scene = GKScene(fileNamed: "GameScene")
-        {
-            if let sceneNode = scene.rootNode as! GameScene?
-            {
-                sceneNode.scaleMode = .aspectFill
-                if let view = self.view as! SKView?
-                {
-                    view.presentScene(sceneNode)
-                    view.ignoresSiblingOrder = true
-                }
-            }
-        }*/
         
         CollisionManager.gameViewController = self
         
@@ -76,7 +67,13 @@ class GameViewController: UIViewController {
     }
     
     func presentEndScene(){
-        
+        LivesLabel.isHidden = true
+        ScoreLabel.isHidden = true
+        StartLabel.isHidden = true
+        StartButton.isHidden = true
+        EndLabel.isHidden = false
+        EndButton.isHidden = false
+        setScene(sceneName: "EndScene")
     }
     
     
@@ -90,6 +87,15 @@ class GameViewController: UIViewController {
         ScoreManager.Lives = 5
         updateLivesLabel()
         updateScoreLabel()
+        setScene(sceneName: "GameScene")
+    }
+    
+    @IBAction func RestartButton_Pressed(_ sender: UIButton) {
+        EndButton.isHidden = true
+        LivesLabel.isHidden = false
+        ScoreLabel.isHidden = false
+        EndLabel.isHidden = true
+        
         setScene(sceneName: "GameScene")
     }
 }

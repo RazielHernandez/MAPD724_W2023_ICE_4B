@@ -78,6 +78,8 @@
 		8ECD344C299713CC00276CEC /* CollisionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD3443299713CC00276CEC /* CollisionManager.swift */; };
 		8ECD344F2998315E00276CEC /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8ECD344E2998315E00276CEC /* StartScene.sks */; };
 		8ECD3451299831DE00276CEC /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD3450299831DE00276CEC /* StartScene.swift */; };
+		8ECD3454299867B200276CEC /* EndScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8ECD3453299867B200276CEC /* EndScene.sks */; };
+		8ECD3456299867C900276CEC /* EndScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD3455299867C900276CEC /* EndScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +156,8 @@
 		8ECD344E2998315E00276CEC /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
 		8ECD3450299831DE00276CEC /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
 		8ECD34522998523900276CEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8ECD3453299867B200276CEC /* EndScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EndScene.sks; sourceTree = "<group>"; };
+		8ECD3455299867C900276CEC /* EndScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +334,8 @@
 				8ECD33BA2997135C00276CEC /* GameScene.swift */,
 				8ECD344E2998315E00276CEC /* StartScene.sks */,
 				8ECD3450299831DE00276CEC /* StartScene.swift */,
+				8ECD3453299867B200276CEC /* EndScene.sks */,
+				8ECD3455299867C900276CEC /* EndScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -429,6 +435,7 @@
 				8ECD3421299713A400276CEC /* explosion1.png in Resources */,
 				8ECD341A299713A400276CEC /* coin02.png in Resources */,
 				8ECD33C52997135D00276CEC /* LaunchScreen.storyboard in Resources */,
+				8ECD3454299867B200276CEC /* EndScene.sks in Resources */,
 				8ECD341D299713A400276CEC /* coin03.png in Resources */,
 				8ECD341C299713A400276CEC /* smallexplosion3.png in Resources */,
 				8ECD340D299713A400276CEC /* planeflash1.png in Resources */,
@@ -468,6 +475,7 @@
 				8ECD33BD2997135C00276CEC /* GameViewController.swift in Sources */,
 				8ECD3444299713CC00276CEC /* Islands.swift in Sources */,
 				8ECD3447299713CC00276CEC /* Player.swift in Sources */,
+				8ECD3456299867C900276CEC /* EndScene.swift in Sources */,
 				8ECD3451299831DE00276CEC /* StartScene.swift in Sources */,
 				8ECD344A299713CC00276CEC /* Layer.swift in Sources */,
 				8ECD3446299713CC00276CEC /* Ocean.swift in Sources */,
