@@ -63,6 +63,8 @@ class GameViewController: UIViewController {
         ScoreLabel.isHidden = true
         StartLabel.isHidden = false
         StartButton.isHidden = false
+        EndLabel.isHidden = true
+        EndButton.isHidden = true
         setScene(sceneName: "StartScene")
     }
     
@@ -82,6 +84,8 @@ class GameViewController: UIViewController {
         ScoreLabel.isHidden = false
         StartLabel.isHidden = true
         StartButton.isHidden = true
+        EndLabel.isHidden = true
+        EndButton.isHidden = true
         // Initialize the Lives and Score
         ScoreManager.Score = 0
         ScoreManager.Lives = 5
